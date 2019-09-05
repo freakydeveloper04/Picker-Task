@@ -11,34 +11,36 @@ import Firebase
 
 class BuyVC: UIViewController {
 
-    var arrData = [ProductModel]()
     var ref = DatabaseReference.init()
+    var arrData = [ProductModel]()
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView : UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.getAllFIRData()
     }
     
     func getAllFIRData(){
+        
+        print("Into getALLFIRData")
+        
         self.ref.child("sell").queryOrderedByKey().observe(.value){ (snapshot) in
-            
             self.arrData.removeAll()
+           
             if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
-                
+            
                 for snap in snapShot{
-                    
+                
                     if let mainDict = snap.value as? [String: AnyObject]{
+                    
                         let name = mainDict["name"] as? String
                         let about = mainDict["about"] as? String
                         let price = mainDict["price"] as? String
-                        let imgView = mainDict["imgView"] as? String ?? ""
+                        let profileURL = mainDict["imgView"] as? String ?? ""
                         
-                        self.arrData.append(ProductModel(name: name!, about: about!, price: price!, imgView: imgView))
-                        
+                        self.arrData.append(ProductModel(name: name!, about: about!, price: price!, imgView: profileURL))
+                     
                         self.tableView.reloadData()
                     }
                     
@@ -47,15 +49,12 @@ class BuyVC: UIViewController {
         }
     }
     
-    @IBAction func sellProduct(_ sender: Any) {
+    @IBAction func productsButton(_ sender: UIButton) {
         
-        self.dismiss(animated: false, completion: nil)
-        let story = UIStoryboard(name: "Main", bundle: nil)
-        let vcc = story.instantiateViewController(withIdentifier: "sell")
-        vcc.modalPresentationStyle = .overCurrentContext
-        self.present(vcc, animated: true, completion: nil)
+        self.getAllFIRData()
+        
+
     }
-    
 }
 
 extension BuyVC: UITableViewDelegate, UITableViewDataSource{

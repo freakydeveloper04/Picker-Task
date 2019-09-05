@@ -17,6 +17,7 @@ class ProductModel{
     var imgView: String?
     
     init(name: String, about: String, price: String, imgView: String) {
+     
         self.name = name
         self.about = about
         self.price = price

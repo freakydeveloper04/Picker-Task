@@ -29,6 +29,7 @@
 		4822126C231D3DC80029467F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822126B231D3DC80029467F /* HomeVC.swift */; };
 		48A831C0231DE38E00112129 /* ViewProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A831BF231DE38E00112129 /* ViewProductVC.swift */; };
 		48A831C2231DE3B700112129 /* MyProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A831C1231DE3B700112129 /* MyProductsVC.swift */; };
+		48BC03322321A9FB00D96D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC03312321A9FB00D96D67 /* ViewController.swift */; };
 		48F2E7D5231F167F00521B06 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2E7D4231F167F00521B06 /* ProductModel.swift */; };
 		48F2E7D7231F1A3600521B06 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2E7D6231F1A3600521B06 /* ProductList.swift */; };
 		9C9BC021DD988E6117767A9C /* Pods_Picker_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BD9E133B06B002297AEEE7 /* Pods_Picker_Task.framework */; };
@@ -82,6 +83,7 @@
 		4822126B231D3DC80029467F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		48A831BF231DE38E00112129 /* ViewProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProductVC.swift; sourceTree = "<group>"; };
 		48A831C1231DE3B700112129 /* MyProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsVC.swift; sourceTree = "<group>"; };
+		48BC03312321A9FB00D96D67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48F2E7D4231F167F00521B06 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		48F2E7D6231F1A3600521B06 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		F1AE34B264B10151C4CA660A /* Pods-Picker Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picker Task.release.xcconfig"; path = "Target Support Files/Pods-Picker Task/Pods-Picker Task.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				480BFF382318341C0012BBC6 /* SideMenu */,
 				48A831BD231DE30600112129 /* BuyControllers */,
 				48A831BE231DE31A00112129 /* SellControllers */,
+				48BC03312321A9FB00D96D67 /* ViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -216,8 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				480BFF3F231839160012BBC6 /* BuyVC.swift */,
-				48A831BF231DE38E00112129 /* ViewProductVC.swift */,
 				48F2E7D6231F1A3600521B06 /* ProductList.swift */,
+				48A831BF231DE38E00112129 /* ViewProductVC.swift */,
 			);
 			path = BuyControllers;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A831C2231DE3B700112129 /* MyProductsVC.swift in Sources */,
+				48BC03322321A9FB00D96D67 /* ViewController.swift in Sources */,
 				480BFF42231839210012BBC6 /* SellVC.swift in Sources */,
 				4822126C231D3DC80029467F /* HomeVC.swift in Sources */,
 				48F2E7D7231F1A3600521B06 /* ProductList.swift in Sources */,

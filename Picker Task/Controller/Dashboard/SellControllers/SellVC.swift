@@ -43,13 +43,8 @@ class SellVC: UIViewController, UITextFieldDelegate {
     func saveFIRData(){
         
         self.uploadImage(self.imgView.image!){ url in
-            
             self.saveImage(name: self.nameTxt.text!, about: self.aboutTxt.text!, price: self.priceTxt.text!, profileURL: url!){ success in
-            
-            //self.saveImage(name: self.nameTxt.text!, about: self.aboutTxt.text!, price: self.priceTxt.text!, profileURL: url!){ success in
-                
                 if success != nil{
-                    
                     print("Yeah")
                 }
             }
@@ -59,10 +54,6 @@ class SellVC: UIViewController, UITextFieldDelegate {
     @IBAction func uploadBtn(_ sender: UIButton) {
     
         self.saveFIRData()
-        
-        let alert = UIAlertController(title: "Upload", message: "Uploaded Successfully!", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "DONE", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -110,6 +101,11 @@ extension SellVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
                     
                     completion(url!)
                 })
+                
+                let alert = UIAlertController(title: "Upload", message: "Uploaded Successfully!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "DONE", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
             }
             else{
                 

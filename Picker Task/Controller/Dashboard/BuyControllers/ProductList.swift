@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductList: UITableViewCell {
 
@@ -22,6 +23,16 @@ class ProductList: UITableViewCell {
             lblName.text = productModel?.name
             lblAbout.text = productModel?.about
             lblPrice.text = productModel?.price
+            
+            let url = URL(string: (productModel?.imgView)!)
+            if let url = url {
+                
+                KingfisherManager.shared.retrieveImage(with: url as Resource,options: nil, progressBlock: nil){ (image, error, cache, imageURL) in
+                
+                self.imgViewP.image = image
+                self.imgViewP.kf.indicatorType = .activity
+                }
+            }
         }
         
     }
